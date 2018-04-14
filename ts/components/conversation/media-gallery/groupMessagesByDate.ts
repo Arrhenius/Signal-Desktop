@@ -77,7 +77,7 @@ const toSection = (
     case 'thisMonth':
       return {
         type: firstMessageWithSection.type,
-        messages: messages,
+        messages,
       };
     case 'yearMonth':
       return {
@@ -95,11 +95,11 @@ const toSection = (
   }
 };
 
-type GenericMessageWithSection<T> = {
+interface GenericMessageWithSection<T> {
   order: number;
   type: T;
   message: Message;
-};
+}
 type MessageWithStaticSection = GenericMessageWithSection<StaticSectionType>;
 type MessageWithYearMonthSection = GenericMessageWithSection<
   YearMonthSectionType
