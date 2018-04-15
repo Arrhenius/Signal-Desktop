@@ -165,8 +165,14 @@ window.Signal.Logs = require('./js/modules/logs');
 const { MediaGallery } =
   require('./ts/components/conversation/media-gallery/MediaGallery');
 
+const PropTypesMessage =
+  require('./ts/components/conversation/media-gallery/propTypes/Message');
+
 window.Signal.Components = {
   MediaGallery,
+  PropTypes: {
+    Message: PropTypesMessage,
+  },
 };
 
 window.Signal.Migrations = {};
