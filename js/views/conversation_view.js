@@ -1,13 +1,12 @@
 /* global Backbone: false */
 /* global Whisper: false */
+/* global Signal: false */
 
 /* eslint-disable */
 
 (function () {
     'use strict';
     window.Whisper = window.Whisper || {};
-
-    const { MediaGallery } = window.Signal.Components;
 
     Whisper.ExpiredToast = Whisper.ToastView.extend({
         render_attributes: function() {
@@ -836,7 +835,7 @@
       };
 
       const view = new Whisper.ReactWrapperView({
-        Component: MediaGallery,
+        Component: Signal.Components.MediaGallery,
         props: mediaGalleryProps,
         onClose: () => this.resetPanel(),
       });
