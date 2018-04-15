@@ -823,6 +823,7 @@
         documents: [],
         onItemClick: ({message}) => {
           const lightboxProps = {
+            shouldShowSaveAsButton: false,
             imageURL: message.objectURL,
           };
           this.lightboxView = new Whisper.ReactWrapperView({
